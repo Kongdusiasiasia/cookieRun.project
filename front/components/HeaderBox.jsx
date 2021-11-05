@@ -3,7 +3,12 @@ import styled from "styled-components";
 import axios from "axios";
 import { Row, Col } from "antd";
 import { Header } from "antd/lib/layout/layout";
+import Link from "next/link";
 
+const Global = styled.body`
+  margin: 0;
+  padding: 0;
+`;
 const TopBox = styled(Row)`
   width: 100%;
   height: 60px;
@@ -15,7 +20,7 @@ const TopBox = styled(Row)`
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 10 px;
+  padding: 0 px;
 `;
 const LoginButton = styled(Col)`
   outline: none;
@@ -47,12 +52,12 @@ const RegistButton = styled(Col)`
   text-align: center;
 `;
 
-const LogoButton = styled(Col)`
+const LogoButton = styled.a`
   outline: none;
   border: none;
   background: none;
   width: 20%;
-  height: 100%;
+  height: 50%;
 
   background-color: black;
 
@@ -63,6 +68,7 @@ const LogoButton = styled(Col)`
   font-weight: bold;
   text-shadow: 3px 3px 2px #555;
   padding: 13px;
+  text-align: center;
 `;
 const ReviewButton = styled(Col)`
   outline: none;
@@ -101,13 +107,35 @@ const CharacterButton = styled(Col)`
 
 const HeaderBox = () => {
   return (
-    <TopBox>
-      <LogoButton span={6}>cookieRun</LogoButton>
-      <ReviewButton span={6}>리뷰게시판</ReviewButton>
-      <CharacterButton span={6}>쿠키소개</CharacterButton>
-      <RegistButton span={2}>회원가입</RegistButton>
-      <LoginButton span={2}>로그인</LoginButton>
-    </TopBox>
+    <Global>
+      <TopBox>
+        <Link href="/">
+          <LogoButton span={6}>
+            <a>cookieRun</a>
+          </LogoButton>
+        </Link>
+        <Link href="/review">
+          <ReviewButton span={6}>
+            <a>리뷰게시판</a>
+          </ReviewButton>
+        </Link>
+        <Link href="/">
+          <CharacterButton span={6}>
+            <a>쿠키소개</a>
+          </CharacterButton>
+        </Link>
+        <Link href="/">
+          <RegistButton span={2}>
+            <a>회원가입</a>
+          </RegistButton>
+        </Link>
+        <Link href="/login">
+          <LoginButton span={2}>
+            <a>로그인</a>
+          </LoginButton>
+        </Link>
+      </TopBox>
+    </Global>
   );
 };
 

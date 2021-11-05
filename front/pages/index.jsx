@@ -1,13 +1,16 @@
 import React from "react";
-import styled from "styled-components";
-import axios from "axios";
-import antd from "antd";
 import HeaderBox from "../components/HeaderBox";
+import ImageView from "../components/ImageBox";
+import FooterBox from "../components/FooterBox";
 
-
-
-const MainPage = () =>{
-    return <HeaderBox/>
-}
+const MainPage = () => {
+  return (
+    <>
+      <HeaderBox />
+      <ImageView />
+      <FooterBox />
+    </>
+  );
+};
 
 export default MainPage;
