@@ -119,12 +119,12 @@ const HeaderBox = () => {
             <a>리뷰게시판</a>
           </ReviewButton>
         </Link>
-        <Link href="/">
+        <Link href="/introduce">
           <CharacterButton span={6}>
             <a>쿠키소개</a>
           </CharacterButton>
         </Link>
-        <Link href="/">
+        <Link href="/signup">
           <RegistButton span={2}>
             <a>회원가입</a>
           </RegistButton>
