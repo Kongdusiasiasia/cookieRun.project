@@ -1,7 +1,8 @@
 import React from "react";
+import IntroChForm from "../components/LoginBox";
 
 const Intro = () => {
-  return <div>Hello Intro</div>;
+  return <IntroChForm />;
 };
 
 export default Intro;

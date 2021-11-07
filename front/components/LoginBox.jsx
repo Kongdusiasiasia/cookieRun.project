@@ -3,6 +3,7 @@ import styled from "styled-components";
 import axios from "axios";
 import { Input } from "antd";
 import Link from "next/link";
+
 const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
