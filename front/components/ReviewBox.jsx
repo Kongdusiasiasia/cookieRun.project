@@ -5,8 +5,14 @@ import { Modal, Button } from "antd";
 import Link from "next/link";
 import "antd/dist/antd.css";
 
-const modalButton = styled.div`
+const ModalButton = styled.div`
   text-align: center;
+  background-color: #ffd400;
+  color: black;
+  width: 100px;
+  height: 20px;
+  border-radius: 5px;
+  cursor: pointer;
 `;
 
 const sectionArea = styled.section`
@@ -36,9 +42,9 @@ const ReviewForm = () => {
   return (
     <>
       <sectionArea>
-        <Button type="primary" onClick={showModal}>
-          Open Modal
-        </Button>
+        <ModalButton type="primary" onClick={showModal}>
+          게시물 쓰기
+        </ModalButton>
         <Modal
           title="Basic Modal"
           visible={isModalVisible}

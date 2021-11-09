@@ -3,4 +3,6 @@ import styled from "styled-components";
 import axios from "axios";
 import Link from "next/link";
 
-const introChForm = () => {};
+const introChForm = () => {
+  return <div>Hello Intro</div>;
+};
