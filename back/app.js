@@ -30,18 +30,15 @@ app.get("/review",async(req,res)=>{
 }
 
 app.post("/review/create", async(req,res,next)=>{
-  console.log(req.body.value);
+  console.log(req.body.result);
 
   const createQuery = `
-  INSERT INTO userReview(
-      title
-      content,
-      createdAt
-  )   VALUES(
-      "${req.body.title}",
-      "${req.body.value}",
-      now()
-  )
+  INSERT INTO userreview(
+    title,
+    content,
+    createdAt	
+    )VALUES
+    ("${req.body.value}","${req.body.title}",now());
   `;
   try{
       db.query(createQuery,(error,result)=>{
@@ -50,7 +47,7 @@ app.post("/review/create", async(req,res,next)=>{
           }
       })
   } catch(error){
-      console.error(error);
+      console.error(error); 
       return res.status(401).json({result:false});
   }
 })
